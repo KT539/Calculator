@@ -20,13 +20,13 @@ def ask_user_input():
     # Get second operand from the user
     operand2 = float(input("Enter the second operand: "))
 
-def calculate(ope1, oper, ope2):
+def calculate(ope1, ope, ope2):
     # Perform the operation based on the operator
-    match oper:
+    match ope:
         case '+':
             res = ope1 + ope2
         case '-':
-            res = ope1 - ope2
+            res = ope2 - ope2
         case '*':
             res = ope1 * ope2
         case '/':
