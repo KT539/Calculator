@@ -1,13 +1,24 @@
 class MathRequest:
-    def ask_user_float_input(self, float_input):
-        while True:
-            try:
-                return float(input(float_input))
-            except ValueError:
-                print("Please enter a float.")
 
-    def ask_user_input(self):
-        # Demander à l'utilisateur d'entrer les valeurs
-        self.operand1 = self.ask_user_float_input("Enter the first operand: ")
-        self.operator = input("Enter an operator (+, -, *, **, /): ")
-        self.operand2 = self.ask_user_float_input("Enter the second operand: ")
+    def __init__ (self, ope1, ope, ope2):
+        self.ope1 = ope1
+        self.ope = ope
+        self.ope2 = ope2
+
+    def get_ope1(self):
+        return self.ope1
+
+    def get_ope(self):
+        return self.ope
+
+    def get_ope2(self):
+        return self.ope2
+
+    def get_res(self):
+        raise NotImplementedError
+
+    def set_res(self, value):
+        raise NotImplementedError
+
+    def to_string(self):
+        raise NotImplementedError
