@@ -1,6 +1,5 @@
 class MathLib:
     def calculate(self, ope1, ope, ope2):
-        # Effectuer l'opération basée sur l'opérateur
         match ope:
             case '+':
                 return ope1 + ope2
