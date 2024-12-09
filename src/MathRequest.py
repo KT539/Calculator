@@ -4,7 +4,7 @@ class MathRequest:
         self.ope1 = ope1
         self.ope = ope
         self.ope2 = ope2
-        self.result = None
+        self.res = None
 
     def get_ope1(self):
         return self.ope1
@@ -16,10 +16,10 @@ class MathRequest:
         return self.ope2
 
     def get_res(self):
-        return self.result
+        return self.res
 
     def set_res(self, value):
-        self.result =  value
+        self.res =  value
 
     def to_string(self):
         raise NotImplementedError
