@@ -7,34 +7,52 @@ class TestMathLib(unittest.TestCase):
     def setUp(self):
         self.math_lib = MathLib()
 
-    def test_addition(self):
+    def test_execute_add_get_result(self):
+        #given
         math_request = MathRequest(3, "add", 2)
-        self.math_lib.calculate(math_request)
+        #when
+        self.math_lib.execute(math_request)
+        #then
         self.assertEqual(math_request.get_res(), 5)
 
-    def test_subtraction(self):
+    def test_execute_sub_get_result(self):
+        #given
         math_request = MathRequest(5, "sub", 3)
-        self.math_lib.calculate(math_request)
+        #when
+        self.math_lib.execute(math_request)
+        #then
         self.assertEqual(math_request.get_res(), 2)
 
-    def test_multiplication(self):
+    def test_execute_mul_get_result(self):
+        #given
         math_request = MathRequest(4, "mul", 3)
-        self.math_lib.calculate(math_request)
+        #when
+        self.math_lib.execute(math_request)
+        #then
         self.assertEqual(math_request.get_res(), 12)
 
-    def test_exponentiation(self):
-        math_request = MathRequest(2, "power", 3)
-        self.math_lib.calculate(math_request)
+    def test_execute_pow_get_result(self):
+        #given
+        math_request = MathRequest(2, "pow", 3)
+        #when
+        self.math_lib.execute(math_request)
+        #then
         self.assertEqual(math_request.get_res(), 8)
 
-    def test_division(self):
+    def test_execute_div_get_result(self):
+        #given
         math_request = MathRequest(10, "div", 2)
-        self.math_lib.calculate(math_request)
+        #when
+        self.math_lib.execute(math_request)
+        #then
         self.assertEqual(math_request.get_res(), 5)
 
-    def test_root(self):
+    def test_execute_root_get_result(self):
+        #given
         math_request = MathRequest(4, "root", 2)
-        self.math_lib.calculate(math_request)
+        #when
+        self.math_lib.execute(math_request)
+        #then
         self.assertEqual(math_request.get_res(), 2)
 
 
