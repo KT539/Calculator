@@ -10,15 +10,23 @@ class MathLib:
         ope = math_request.get_ope()
 
         match ope:
-            case '+':
+            case "add":
                 math_request.set_res(ope1 + ope2)
-            case '-':
+            case "sub":
                 math_request.set_res(ope1 - ope2)
-            case '*':
+            case "mul":
                 math_request.set_res(ope1 * ope2)
-            case '**':
+            case "power":
                 math_request.set_res(ope1 ** ope2)
-            case '/':
+            case "root":
+                if ope1 < 0 and ope2 % 2 == 0:
+                    print("Error: Cannot calculate even root of a negative number.")
+                    return None
+                if ope2 == 0:
+                    print("Error: Division by zero is undefined in root calculation.")
+                    return None
+                math_request.set_res(ope1 ** (1 / ope2))
+            case "div":
                 if ope2 == 0:
                     print("Error: Division by zero is undefined.")
                     return None

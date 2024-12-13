@@ -6,7 +6,7 @@ class TestMathRequest(unittest.TestCase):
 
     def setUp(self):
         self.ope1 = 3
-        self.ope = '+'
+        self.ope = "add"
         self.ope2 = 5
         self.mathRequest = MathRequest(self.ope1, self.ope, self.ope2)
 

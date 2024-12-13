@@ -8,29 +8,34 @@ class TestMathLib(unittest.TestCase):
         self.math_lib = MathLib()
 
     def test_addition(self):
-        math_request = MathRequest(3, '+', 2)
+        math_request = MathRequest(3, "add", 2)
         self.math_lib.calculate(math_request)
         self.assertEqual(math_request.get_res(), 5)
 
     def test_subtraction(self):
-        math_request = MathRequest(5, '-', 3)
+        math_request = MathRequest(5, "sub", 3)
         self.math_lib.calculate(math_request)
         self.assertEqual(math_request.get_res(), 2)
 
     def test_multiplication(self):
-        math_request = MathRequest(4, '*', 3)
+        math_request = MathRequest(4, "mul", 3)
         self.math_lib.calculate(math_request)
         self.assertEqual(math_request.get_res(), 12)
 
     def test_exponentiation(self):
-        math_request = MathRequest(2, '**', 3)
+        math_request = MathRequest(2, "power", 3)
         self.math_lib.calculate(math_request)
         self.assertEqual(math_request.get_res(), 8)
 
     def test_division(self):
-        math_request = MathRequest(10, '/', 2)
+        math_request = MathRequest(10, "div", 2)
         self.math_lib.calculate(math_request)
         self.assertEqual(math_request.get_res(), 5)
+
+    def test_root(self):
+        math_request = MathRequest(4, "root", 2)
+        self.math_lib.calculate(math_request)
+        self.assertEqual(math_request.get_res(), 2)
 
 
 if __name__ == '__main__':
